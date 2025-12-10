@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-emerald-500 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+    <h1 class="text-3xl font-bold text-emerald-600 mb-4">Thank You! 💖</h1>
+    <p class="text-lg text-gray-700">Your donation was successful and means a lot.</p>
+    <a class="text-blue-400" href="../index.html">Back to the Home page-></a>
+  </div>
+  <div id="error-box" class="text-red-600 font-semibold mt-4"></div>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const error = params.get("error");
+  if (error) {
+    document.getElementById("error-box").textContent = "⚠️ " + decodeURIComponent(error);
+  }
+</script>
+</body>
+</html>

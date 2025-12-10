@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donations - Divd Charity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="input.css">
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+  <div class="min-h-screen bg-black">
+    <!-- Header Section -->
+    <header class="bg-black text-white py-8">
+      <div class="w-[90%] max-w-[1100px] mx-auto px-4">
+        <!-- Logo -->
+        <div class="flex justify-center md:justify-start mb-8">
+          <img class="h-16 w-16 content-center" src="../img/charity-log-smaller.svg" alt="Divd Charity Logo">
+        </div>
+
+        <!-- Hero -->
+        <div class="text-center py-8">
+          <h1 class="text-5xl md:text-7xl font-bold text-yellow-300 mb-4">
+            Make a Donation
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
+            Your generosity helps us create lasting impact in communities worldwide
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex justify-center">
+          <ul class="flex flex-wrap justify-center gap-4">
+            <li>
+              <a href="../index.html"
+                class="block px-6 py-2 text-white border-2 border-emerald-500 rounded-full hover:bg-emerald-500 hover:text-black transition-all duration-300 text-center min-w-[120px]">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="../purpose.html"
+                class="block px-6 py-2 text-white border-2 border-emerald-500 rounded-full hover:bg-emerald-500 hover:text-black transition-all duration-300 text-center min-w-[120px]">
+                Purpose
+              </a>
+            </li>
+            <li>
+              <a href="../projects.html"
+                class="block px-6 py-2 text-white border-2 border-emerald-500 rounded-full hover:bg-emerald-500 hover:text-black transition-all duration-300 text-center min-w-[120px]">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="cp../people.html"
+                class="block px-6 py-2 text-white border-2 border-emerald-500 rounded-full hover:bg-emerald-500 hover:text-black transition-all duration-300 text-center min-w-[120px]">
+                People
+              </a>
+            </li>
+            <li>
+              <a href="../principles.html"
+                class="block px-6 py-2 text-white border-2 border-emerald-500 rounded-full hover:bg-emerald-500 hover:text-black transition-all duration-300 text-center min-w-[120px]">
+                Principles
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <hr class="bg-emerald-500 h-0.5 mt-6 border-0 w-[80%] mx-auto rounded-full">
+    </header>
+
+
+      <section class="py-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] max-w-[1100px] mx-auto">
+            <!-- Left: Payment Options -->
+            <div class="bg-[rgb(30,30,43)] text-white rounded-lg p-8">
+              <h2 class="text-2xl font-bold mb-6">Choose Payment Method</h2>                    
+                <ul class="space-y-4">
+                    <li>
+                      <button class="payment-option w-full text-left px-4 py-3 rounded-lg border-2 border-gray-300 hover:border-emerald-500 transition-all" data-method="card">
+                       💳 Credit Card
+                      </button>
+                   </li>
+                </ul>
+              </div>
+
+              <!-- Right: Donation Summary + Dynamic Form -->
+              <div class="bg-[rgb(30,30,43)] text-white rounded-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">Donation Summary</h2>
+                <p id="donationAmount" class="text-lg mb-6"></p>
+
+                <div id="paymentFormContainer">
+                  <!-- Dynamic form will be injected here -->
+                </div>
+
+                <button id="donateBtn" class="mt-6 w-full bg-black text-emerald-500 border-2 border-black hover:bg-emerald-600 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                  Donate Now
+                </button>
+              </div>
+            </section>
+      
+     <!-- <div class="mb-4">
+                <label class="block text-lg font-semibold mb-2">
+                  Card details:
+                </label>
+                <div id="card-element"
+                  class="w-full p-3 rounded-lg border-2 border-gray-300 focus-within:border-black bg-white">
+                </div>
+                <div id="card-errors" class="text-red-500 text-sm mt-2"></div>
+              </div> -->
+    <!-- Donation Amount Section -->
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+      <div class="w-[90%] max-w-[1100px] mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between mb-8">
+          <div class="mb-8 md:mb-0 md:w-[30%]">
+            <div class="flex justify-center md:justify-start mb-8">
+              <img class="h-16 w-16 content-center" src="../img/charity-log-smaller.svg" alt="Divd Charity Logo">
+            </div>
+            <p class="text-gray-300 leading-relaxed">
+              True charity is the desire to be useful to others with no thought of recompense
+            </p>
+          </div>
+
+          <div class="md:w-[65%] grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-lg font-semibold mb-4 pb-2 border-b border-emerald-500">
+                Navigation
+              </h3>
+              <ul class="space-y-2">
+                <li><a href="purpose.html"
+                    class="text-white hover:text-emerald-500 transition-colors duration-300">Purpose</a></li>
+                <li><a href="projects.html"
+                    class="text-white hover:text-emerald-500 transition-colors duration-300">Projects</a></li>
+                <li><a href="people.html"
+                    class="text-white hover:text-emerald-500 transition-colors duration-300">People</a></li>
+                <li><a href="principles.html"
+                    class="text-white hover:text-emerald-500 transition-colors duration-300">Principles</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-4 pb-2 border-b border-emerald-500">
+                Connect
+              </h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-white hover:text-emerald-500 transition-colors duration-300">Contact Us</a>
+                </li>
+                <li><a href="#" class="text-white hover:text-emerald-500 transition-colors duration-300">Volunteer</a>
+                </li>
+                <li><a href="#" class="text-white hover:text-emerald-500 transition-colors duration-300">Tax
+                    Information</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-4">
+          <p class="text-gray-400 text-sm">
+            &copy; 2025 Divd Charity. All rights reserved. Tax ID: 123-45-6789
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://js.stripe.com/v3/"></script>
+s
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const amount = params.get("amount");
+  document.getElementById("donationAmount").textContent = amount
+    ? `You're donating €${amount}`
+    : "No amount selected";
+
+  const paymentFormContainer = document.getElementById("paymentFormContainer");
+
+  const paymentOptions = document.querySelectorAll(".payment-option");
+  paymentOptions.forEach(btn => {
+    btn.addEventListener("click", () => {
+      paymentOptions.forEach(b => b.classList.remove("border-emerald-500", "bg-emerald-500", "text-black"));
+      btn.classList.add("border-emerald-500", "bg-emerald-500", "text-black");
+
+      const method = btn.dataset.method;
+      renderPaymentForm(method);
+    });
+  });
+
+  function renderPaymentForm(method) {
+    if (method === "card") {
+      paymentFormContainer.innerHTML = `
+        <label class="block text-lg font-semibold mb-2">Card Details</label>
+        <div id="card-element" class="w-full p-3 rounded-lg border-2 border-gray-300 bg-white mb-2"></div>
+        <div id="card-errors" class="text-red-500 text-sm"></div>
+      `;
+
+      const stripe = Stripe("YOUR_PUBLISHABLE_KEY");
+      const elements = stripe.elements();
+      const card = elements.create("card", {
+        style: {
+          base: {
+            color: "#000",
+            fontFamily: "Inter, sans-serif",
+            fontSize: "16px",
+            iconColor: "#10B981",
+            "::placeholder": { color: "#9CA3AF" }
+          },
+          invalid: { color: "#EF4444", iconColor: "#EF4444" }
+        }
+      });
+      card.mount("#card-element");
+
+      document.getElementById("donateBtn").onclick = async () => {
+        const res = await fetch("http://localhost:5000/donate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: parseInt(amount) * 100 })
+        });
+
+        const { clientSecret } = await res.json();
+
+        const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+          payment_method: { card }
+        });
+
+        if (error) {
+          document.getElementById("card-errors").textContent = error.message;
+        } else if (paymentIntent.status === "succeeded") {
+          window.location.href = "/thankyou.html";
+        }
+      };
+    } else {
+      paymentFormContainer.innerHTML = `
+        <p class="text-gray-300">You selected <strong>${method}</strong>. This method is not yet implemented.</p>
+      `;
+      document.getElementById("donateBtn").onclick = () => {
+        alert("This payment method is not yet available.");
+      };
+    }
+  }
+</script>
+
+</body>
+
+</html>
